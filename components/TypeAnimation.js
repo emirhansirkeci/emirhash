@@ -6,12 +6,10 @@ export default function TypeAnimation() {
       steps={[
         "Backend Developer",
         1000,
-        "NFT Smartcontract",
+        "NFT Smartcontracts",
         1000,
-        "Next.JS",
-        500,
-        "React.JS",
-        500,
+        "Next.JS + React.JS",
+        1000,
       ]}
       loop={Infinity}
       wrapper="label"
