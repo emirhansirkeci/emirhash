@@ -13,4 +13,55 @@ a {
 
 * {
   box-sizing: border-box;
+  line-height: 1;
+}
+
+html, body{
+  background-color:#EAEAEA;
+}
+
+.typical{
+  font-size: large;
+  background: #b92b27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b92b27, #1565c0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b92b27, #1565c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container{
+  padding:0 12rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .container{
+    padding: 1rem 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container{
+    padding:1rem 2rem;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #444444;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }
