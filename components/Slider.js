@@ -41,8 +41,8 @@ export default function Slider() {
           >
             <Row>
               <Col>
-                <Text color="#000" size={16}>
-                  Majime NFT Project
+                <Text color="#000" size={16} css={{ letterSpacing: "$wide" }}>
+                  Lost Dogs NFT Project
                 </Text>
                 <Text color="#000" size={12}>
                   Back End Developer
@@ -52,7 +52,7 @@ export default function Slider() {
                 <Row justify="flex-end">
                   <Button flat auto rounded color="gradient">
                     <Text
-                      css={{ color: "inherit" }}
+                      css={{ color: "$accents1" }}
                       size={12}
                       weight="bold"
                       transform="uppercase"
@@ -88,8 +88,8 @@ export default function Slider() {
           >
             <Row>
               <Col>
-                <Text color="#000" size={16}>
-                  Majime NFT Project
+                <Text color="#000" size={16} css={{ letterSpacing: "$wide" }}>
+                  Bemuer NFT Project
                 </Text>
                 <Text color="#000" size={12}>
                   Back End Developer
@@ -99,7 +99,7 @@ export default function Slider() {
                 <Row justify="flex-end">
                   <Button flat auto rounded color="gradient">
                     <Text
-                      css={{ color: "inherit" }}
+                      css={{ color: "$accents1" }}
                       size={12}
                       weight="bold"
                       transform="uppercase"
@@ -135,7 +135,7 @@ export default function Slider() {
           >
             <Row>
               <Col>
-                <Text color="#000" size={16}>
+                <Text color="#000" size={16} css={{ letterSpacing: "$wide" }}>
                   Majime NFT Project
                 </Text>
                 <Text color="#000" size={12}>
@@ -146,7 +146,7 @@ export default function Slider() {
                 <Row justify="flex-end">
                   <Button flat auto rounded color="gradient">
                     <Text
-                      css={{ color: "inherit" }}
+                      css={{ color: "$accents1" }}
                       size={12}
                       weight="bold"
                       transform="uppercase"
