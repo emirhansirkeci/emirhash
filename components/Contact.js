@@ -54,7 +54,7 @@ export default function Contact() {
 
     let config = {
       method: "post",
-      url: "http://localhost:3000/api/mailsender",
+      url: `https://emirhash.vercel.app/api/mailsender`,
       header: {
         "Content-Type": "application/json",
       },
