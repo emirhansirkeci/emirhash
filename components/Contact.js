@@ -1,46 +1,82 @@
-import { useState, useMemo } from "react";
+import { useState, useRef } from "react";
 import { Icon } from "@iconify/react";
 import {
-  Spacer,
   Modal,
   Input,
   Textarea,
   Button,
-  useInput,
+  Loading,
   Text,
 } from "@nextui-org/react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Contact() {
+  /* === MODAL === */
   const [visible, setVisible] = useState(false);
   const handler = () => setVisible(true);
   const closeHandler = () => {
     setVisible(false);
+    setStatus();
   };
-
-  const { value, reset, bindings } = useInput("");
 
   const validateEmail = (value) => {
     return value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
   };
+  /* ============ */
 
-  const helper = useMemo(() => {
-    if (!value)
-      return {
-        text: "",
-        color: "",
-      };
-    const isValid = validateEmail(value);
-    return {
-      text: isValid ? "Correct email" : "Enter a valid email",
-      color: isValid ? "success" : "error",
+  const [status, setStatus] = useState("");
+  const [isLoading, setIsLoading] = useState();
+
+  const nameRef = useRef();
+  const mailRef = useRef();
+  const msgRef = useRef();
+
+  const sendHander = async () => {
+    const name = nameRef.current.value;
+    const from = mailRef.current.value;
+    const msg = msgRef.current.value;
+    const subject = "New Message From Emirhash Website";
+
+    const isValid = validateEmail(from);
+    if (!isValid) return setStatus({ msg: "Invalid mail", color: "error" });
+    if (!name) return setStatus({ msg: "Invalid name", color: "error" });
+    if (!msg) return setStatus({ msg: "Invalid message", color: "error" });
+    setStatus("");
+
+    let values = {
+      name,
+      from,
+      msg,
+      subject,
     };
-  }, [value]);
+
+    let config = {
+      method: "post",
+      url: "http://localhost:3000/api/mailsender",
+      header: {
+        "Content-Type": "application/json",
+      },
+      data: values,
+    };
+
+    setIsLoading(true);
+    const response = await axios(config);
+
+    if (response.status == 200)
+      setStatus({ msg: "I got your message 🥳", color: "success" });
+    else setStatus({ msg: "Error please try again 😔", color: "error" });
+
+    setIsLoading(false);
+  };
 
   return (
     <section
       style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}
     >
       <Button
-        color=""
+        color="empty"
         auto
         shadow
         icon={<Icon icon="logos:google-gmail" />}
@@ -51,21 +87,23 @@ export default function Contact() {
 
       <Modal
         closeButton
-        blur
         aria-labelledby="modal-title"
         open={visible}
         onClose={closeHandler}
       >
         <Modal.Header>
-          <Text id="modal-title" size={18}>
-            Node
-            <Text b size={18}>
-              Mailer
+          <Text id="modal-title" size={18} css={{ letterSpacing: "$widest" }}>
+            Contact
+            <Text b size={18} css={{ letterSpacing: "$widest" }}>
+              {" "}
+              Me
             </Text>
           </Text>
         </Modal.Header>
         <Modal.Body>
           <Input
+            ref={nameRef}
+            aria-label="Name"
             clearable
             bordered
             fullWidth
@@ -74,12 +112,9 @@ export default function Contact() {
             placeholder="Name"
             // contentLeft={}
           />
-          <Spacer y={"1px"} />
           <Input
-            {...bindings}
-            helperColor={helper.color}
-            helperText={helper.text}
-            status={helper.color}
+            ref={mailRef}
+            aria-label="Email"
             clearable
             bordered
             fullWidth
@@ -88,23 +123,32 @@ export default function Contact() {
             placeholder="Email"
             // contentLeft={}
           />
-          <Spacer y={"1px"} />
 
           <Textarea
+            ref={msgRef}
+            aria-label="Your Message"
             bordered
             color="primary"
             placeholder="Your message"
           ></Textarea>
         </Modal.Body>
         <Modal.Footer>
-          <Button auto flat color="error" onClick={closeHandler}>
+          {status ? (
+            <Text b color={status.color} css={{ paddingRight: "$5" }}>
+              {status.msg}
+            </Text>
+          ) : (
+            ""
+          )}
+          <Button auto color="error" onClick={closeHandler}>
             Close
           </Button>
-          <Button auto onClick={closeHandler}>
-            Send
+          <Button auto onClick={sendHander} size="md">
+            {isLoading ? <Loading color="white"></Loading> : "Send"}
           </Button>
         </Modal.Footer>
       </Modal>
+      <ToastContainer />
     </section>
   );
 }

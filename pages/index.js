@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { Container } from "@nextui-org/react";
 import Hero from "../components/Hero";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
   return (

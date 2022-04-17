@@ -65,3 +65,7 @@ html, body{
 ::-webkit-scrollbar-thumb:hover {
   background: #555555;
 }
+
+.toast {
+  z-index: 9999 !important;
+}
