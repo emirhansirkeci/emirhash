@@ -40,6 +40,6 @@ export const getStaticProps = async () => {
   const { projects } = data;
   return {
     props: { projects },
-    revalidate: 60,
+    revalidate: 3600,
   };
 };
