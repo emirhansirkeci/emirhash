@@ -12,6 +12,7 @@ const to = "emirhansirkeci8@gmail.com";
 
 export default async (req, res) => {
   let { name, from, msg, subject } = req.body;
+  if (!name || !from || !msg || !subject) return;
 
   let mailOptions = {
     from,
