@@ -21,7 +21,7 @@ export default function Home({ projects }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const { data } = await client.query({
     query: gql`
       query AllData {
@@ -40,5 +40,6 @@ export const getServerSideProps = async () => {
   const { projects } = data;
   return {
     props: { projects },
+    revalidate: 60,
   };
 };
