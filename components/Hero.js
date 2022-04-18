@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import Slider from "./Slider";
 import Contact from "./Contact";
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <section className={styles.hero}>
       <div className={styles.greeting}>Hey 👋 I'm</div>
@@ -49,7 +49,7 @@ export default function Hero() {
         </Text>
         <Spacer y={1} />
       </div>
-      <Slider />
+      <Slider projects={props.projects} />
       <Contact />
     </section>
   );
