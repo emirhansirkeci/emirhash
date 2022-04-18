@@ -21,7 +21,7 @@ export default function Home({ projects }) {
   );
 }
 
-export const getStaticProps = async (req, res) => {
+export const getStaticProps = async () => {
   const { data } = await client.query({
     query: gql`
       query AllData {
@@ -40,6 +40,10 @@ export const getStaticProps = async (req, res) => {
   const { projects } = data;
   return {
     props: { projects },
-    revalidate: 5,
+    revalidate: 30,
   };
+};
+
+export const getStaticPaths = async () => {
+  return;
 };
