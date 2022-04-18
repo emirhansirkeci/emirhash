@@ -18,6 +18,7 @@ export default function Slider(props) {
       infinite={true}
       autoPlay={true}
       autoPlaySpeed={5000}
+      removeArrowOnDeviceType={["tablet", "mobile"]}
       transitionDuration={600}
     >
       {props.projects.map((project) => (
