@@ -8,7 +8,7 @@ export default function TypeAnimation() {
         1000,
         "NFT Smartcontracts",
         1000,
-        "Next.JS + React.JS",
+        "React.JS | Next.JS",
         1000,
       ]}
       loop={Infinity}

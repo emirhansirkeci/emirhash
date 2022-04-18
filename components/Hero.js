@@ -12,8 +12,8 @@ export default function Hero(props) {
       <div className={styles.name}>
         <h1>Emirhash</h1>
       </div>
-      <label className="typical">Backend Developer</label>
-      {/* <TypeAnimation /> */}
+      {/* <label className="typical">Backend Developer</label> */}
+      <TypeAnimation />
       <div className={styles.icons}>
         <a href="#">
           <Icon icon="bi:linkedin" color="#0e76a8" width="30" height="30" />
