@@ -37,10 +37,9 @@ export default function Hero(props) {
       <div className={styles.aboutMe}>
         <p>
           I started to write smartcontracts for NFT projects with solidity and
-          nowadays im obsessed with web3 technologies.
+          nowadays im obsessed with web3.
           <br />
-          My future plan is to develop a dApp that allows you to order real life
-          items with coins.
+          My future plan is to be an expert at blockchain technologies.
         </p>
       </div>
       <div>
