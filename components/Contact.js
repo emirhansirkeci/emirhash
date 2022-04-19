@@ -72,9 +72,7 @@ export default function Contact() {
   };
 
   return (
-    <section
-      style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}
-    >
+    <section style={{ display: "flex", justifyContent: "" }}>
       <Button
         color="empty"
         auto

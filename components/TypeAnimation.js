@@ -6,7 +6,7 @@ export default function TypeAnimation() {
       steps={[
         "Backend Developer",
         1000,
-        "NFT Smartcontracts",
+        "NFT Smart contracts",
         1000,
         "React.JS | Next.JS",
         1000,

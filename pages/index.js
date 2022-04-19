@@ -26,18 +26,34 @@ export const getStaticProps = async () => {
     query: gql`
       query AllData {
         projects {
-          id
           image {
             url
           }
           link
           name
           role
+          id
+          details {
+            id
+            name
+            type
+            standard
+            utils
+            network
+            backend
+            github
+            contract
+            notes {
+              text
+            }
+          }
         }
       }
     `,
   });
+
   const { projects } = data;
+
   return {
     props: { projects },
     revalidate: 3600,

@@ -1,9 +1,9 @@
-import { Spacer, Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { Spacer, Text } from "@nextui-org/react";
 import TypeAnimation from "./TypeAnimation";
 import styles from "../styles/Hero.module.css";
 import { Icon } from "@iconify/react";
 import Slider from "./Slider";
-import Contact from "./Contact";
+import QuickLinks from "./QuickLinks";
 
 export default function Hero(props) {
   return (
@@ -36,7 +36,7 @@ export default function Hero(props) {
       </div>
       <div className={styles.aboutMe}>
         <p>
-          I started to write smartcontracts for NFT projects with solidity and
+          I started to write smart contracts for NFT projects with solidity and
           nowadays im obsessed with web3.
           <br />
           My future plan is to be an expert at blockchain technologies.
@@ -49,7 +49,8 @@ export default function Hero(props) {
         <Spacer y={1} />
       </div>
       <Slider projects={props.projects} />
-      <Contact />
+      <Spacer y="1" />
+      <QuickLinks />
     </section>
   );
 }

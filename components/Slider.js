@@ -28,6 +28,7 @@ export default function Slider(props) {
           img={project.image.url}
           role={project.role}
           link={project.link}
+          details={project.details}
         />
       ))}
     </Carousel>
