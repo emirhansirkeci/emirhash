@@ -9,12 +9,13 @@ export default function QuickLinks() {
         Quick Links
       </Text>
       <Spacer y="1" />
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex", overflowY: "auto", padding: "1rem 0" }}>
         <Contact />
         <Spacer y="0" x="0.5" />
         <Tooltip
           color={"default"}
-          content={<Text b>Will Be Available Soon</Text>}
+          placement={"bottomStart"}
+          content={<Text b> Soon</Text>}
         >
           <Button
             color="empty"
@@ -27,8 +28,9 @@ export default function QuickLinks() {
         </Tooltip>
         <Spacer y="0" x="0.5" />
         <Tooltip
+          placement={"bottomStart"}
           color={"default"}
-          content={<Text b>Will Be Available Soon</Text>}
+          content={<Text b>Soon</Text>}
         >
           <Button color="empty" auto shadow icon={<Icon icon="bi:medium" />}>
             Medium
