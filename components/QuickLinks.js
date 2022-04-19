@@ -8,7 +8,6 @@ export default function QuickLinks() {
       <Text h3 css={{ letterSpacing: 1 }}>
         Quick Links
       </Text>
-      <Spacer y="1" />
       <div style={{ display: "flex", overflowY: "auto", padding: "1rem 0" }}>
         <Contact />
         <Spacer y="0" x="0.5" />
