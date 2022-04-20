@@ -1,0 +1,21 @@
+.quickLinks{
+    margin-top:1rem;
+    display:flex;
+}
+
+.quickLinks .medium, .contact{
+    margin-right:10px
+}
+
+@media only screen and (max-width: 768px) {
+    /* .quickLinks{
+        flex-direction: column;
+    }
+    .quickLinks .medium, .contact{
+        margin-right:0
+    }
+
+    .quickLinks .twitter, .medium{
+        margin-top:.5rem;
+    } */
+}

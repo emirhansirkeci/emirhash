@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import client from "../apollo-client";
 import { gql } from "@apollo/client";
 

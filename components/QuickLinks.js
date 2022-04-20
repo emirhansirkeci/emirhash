@@ -1,6 +1,7 @@
 import Contact from "./Contact";
 import { Spacer, Text, Button, Tooltip } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
+import styles from "../styles/QuickLinks.module.css";
 
 export default function QuickLinks() {
   return (
@@ -8,31 +9,38 @@ export default function QuickLinks() {
       <Text h3 css={{ letterSpacing: 1 }}>
         Quick Links
       </Text>
-      <div style={{ display: "flex", overflowY: "auto", padding: "1rem 0" }}>
-        <Contact />
-        <Spacer y="0" x="0.5" />
+      <div className={styles.quickLinks}>
+        <span className={styles.contact}>
+          <Contact />
+        </span>
+        {/* <Tooltip
+          placement={"bottomStart"}
+          color={"default"}
+          content={<Text b>Soon</Text>}
+        >
+          <Button
+            className={styles.medium}
+            color="empty"
+            auto
+            shadow
+            icon={<Icon icon="bi:medium" />}
+          >
+            Medium
+          </Button>
+        </Tooltip> */}
         <Tooltip
           color={"default"}
           placement={"bottomStart"}
           content={<Text b> Soon</Text>}
         >
           <Button
+            className={styles.twitter}
             color="empty"
             auto
             shadow
             icon={<Icon icon="logos:twitter" />}
           >
             Tweets
-          </Button>
-        </Tooltip>
-        <Spacer y="0" x="0.5" />
-        <Tooltip
-          placement={"bottomStart"}
-          color={"default"}
-          content={<Text b>Soon</Text>}
-        >
-          <Button color="empty" auto shadow icon={<Icon icon="bi:medium" />}>
-            Medium
           </Button>
         </Tooltip>
       </div>

@@ -30,18 +30,18 @@ html, body{
 }
 
 .container{
-  padding:1rem 12rem;
+  padding:1rem 12rem 2.5rem 12rem;
 }
 
 
 @media only screen and (max-width: 1000px) {
   .container{
-    padding: 1rem 5rem;
+    padding:1rem 5rem 2rem 5rem;
   }
 }
 @media only screen and (max-width: 768px) {
   .container{
-    padding:1rem 1rem;
+    padding:1rem 1rem 2rem 1rem;
   }
 }
 

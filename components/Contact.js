@@ -9,8 +9,6 @@ import {
   Text,
 } from "@nextui-org/react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   /* === MODAL === */
@@ -72,7 +70,7 @@ export default function Contact() {
   };
 
   return (
-    <section style={{ display: "flex", justifyContent: "" }}>
+    <section>
       <Button
         color="empty"
         auto
@@ -146,7 +144,6 @@ export default function Contact() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <ToastContainer />
     </section>
   );
 }

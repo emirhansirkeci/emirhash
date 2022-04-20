@@ -49,7 +49,7 @@ export default function ProjectCard({ name, role, img, link, details }) {
                   style={{
                     color: "#222222",
                     marginRight: ".5rem",
-                    opacity: "0.75",
+                    opacity: "0.35",
                     cursor: "pointer",
                   }}
                   width="25"
@@ -57,7 +57,7 @@ export default function ProjectCard({ name, role, img, link, details }) {
                 />
                 <Button
                   auto
-                  color="gradient"
+                  color="default"
                   onClick={() => window.open(link, "_blank")}
                 >
                   <Text

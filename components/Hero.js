@@ -15,10 +15,10 @@ export default function Hero(props) {
       {/* <label className="typical">Backend Developer</label> */}
       <TypeAnimation />
       <div className={styles.icons}>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/emirhansirkeci/" target="_blank">
           <Icon icon="bi:linkedin" color="#0e76a8" width="30" height="30" />
         </a>
-        <a href="#">
+        <a href="https://github.com/justChargin/" target="_blank">
           <Icon
             icon="akar-icons:github-fill"
             color="black"
@@ -26,10 +26,13 @@ export default function Hero(props) {
             height="30"
           />
         </a>
-        <a href="#">
+        <a href="#" target="_blank">
           <Icon icon="logos:twitter" color="#6fda44" width="30" height="30" />
         </a>
-        <a href="#">
+        <a
+          href="https://www.upwork.com/freelancers/~0114a7a5117a83e1e6"
+          target="_blank"
+        >
           <Icon icon="logos:upwork" color="#6fda44" width="100" />
           {/* <Icon icon="simple-icons:upwork" color="#6fda44" width="30" /> */}
         </a>
