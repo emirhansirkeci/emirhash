@@ -45,14 +45,7 @@ export default function Hero(props) {
           My future plan is to be an expert at blockchain technologies.
         </p>
       </div>
-      <div>
-        <Text h3 css={{ letterSpacing: 1 }}>
-          My Recent Projects
-        </Text>
-        <Spacer y={1} />
-      </div>
       <Slider projects={props.projects} />
-      <Spacer y="1" />
       <QuickLinks />
     </section>
   );

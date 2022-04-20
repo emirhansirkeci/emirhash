@@ -6,6 +6,7 @@ import styles from "../styles/QuickLinks.module.css";
 export default function QuickLinks() {
   return (
     <div>
+      <Spacer y="1" />
       <Text h3 css={{ letterSpacing: 1 }}>
         Quick Links
       </Text>
@@ -31,7 +32,7 @@ export default function QuickLinks() {
         <Tooltip
           color={"default"}
           placement={"bottomStart"}
-          content={<Text b> Soon</Text>}
+          content={<Text b>Available Soon</Text>}
         >
           <Button
             className={styles.twitter}
