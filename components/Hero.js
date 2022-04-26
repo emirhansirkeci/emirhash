@@ -26,9 +26,9 @@ export default function Hero(props) {
             height="30"
           />
         </a>
-        <a href="https://twitter.com/emirhash" target="_blank">
+        {/* <a href="" target="_blank">
           <Icon icon="logos:twitter" color="#6fda44" width="30" height="30" />
-        </a>
+        </a> */}
         <a
           href="https://www.upwork.com/freelancers/~0114a7a5117a83e1e6"
           target="_blank"
