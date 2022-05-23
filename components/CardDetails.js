@@ -35,7 +35,7 @@ export default function CardDetails({ details }) {
 
       {details.backend && (
         <Text p id="modal-title" size={15} css={{ letterSpacing: "$widest" }}>
-          Standard: <b>{details.backend}</b>
+          Languages: <b>{details.backend}</b>
         </Text>
       )}
 
