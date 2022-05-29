@@ -69,3 +69,7 @@ html, body{
 .toast {
   z-index: 9999 !important;
 }
+
+a{
+  color: #1e80f3
+}
