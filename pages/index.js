@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
   const { data } = await client.query({
     query: gql`
       query AllData {
-        projects {
+        projects(orderBy: priority_ASC) {
           image {
             url
           }

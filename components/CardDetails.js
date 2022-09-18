@@ -59,17 +59,23 @@ export default function CardDetails({ details }) {
 
       <Spacer y={"$1"}></Spacer>
 
-      <Text h3 id="modal-title" css={{ letterSpacing: "$widest" }}>
-        Notes
-      </Text>
+      {details.notes.text ? (
+        <>
+          <Text h3 id="modal-title" css={{ letterSpacing: "$widest" }}>
+            Notes
+          </Text>
 
-      <Text p id="modal-title" size={15}>
-        <span
-          dangerouslySetInnerHTML={{
-            __html: details.notes.text,
-          }}
-        ></span>
-      </Text>
+          <Text p id="modal-title" size={15}>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: details.notes.text,
+              }}
+            ></span>
+          </Text>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 }
