@@ -14,21 +14,6 @@ export default function QuickLinks() {
         <span className={styles.contact}>
           <Contact />
         </span>
-        {/* <Tooltip
-          placement={"bottomStart"}
-          color={"default"}
-          content={<Text b>Soon</Text>}
-        >
-          <Button
-            className={styles.medium}
-            color="empty"
-            auto
-            shadow
-            icon={<Icon icon="bi:medium" />}
-          >
-            Medium
-          </Button>
-        </Tooltip> */}
         <Tooltip
           color={"default"}
           placement={"bottomStart"}

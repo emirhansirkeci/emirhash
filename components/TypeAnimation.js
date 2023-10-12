@@ -4,12 +4,13 @@ export default function TypeAnimation() {
   return (
     <Typical
       steps={[
-        "Backend Developer",
+        "Developer",
         1000,
         "NFT Smart Contracts",
         1000,
-        "React.JS | Next.JS",
+        "React.js | Next.js",
         1000,
+        "Student",
       ]}
       loop={Infinity}
       wrapper="label"

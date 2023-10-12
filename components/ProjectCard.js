@@ -27,7 +27,6 @@ export default function ProjectCard({ name, role, img, link, details }) {
           css={{
             position: "absolute",
             bgColor: "#fffff",
-            // bgBlur: "#222222",
             borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
             bottom: 0,
             zIndex: 1,

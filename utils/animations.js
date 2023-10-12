@@ -12,12 +12,6 @@ export function fadeInLeft(ref) {
   );
 }
 
-// export function fadeInLeft(refs) {
-//     for(let i = 0; i < refs.length; i++){
-
-//     }
-// }
-
 export function fadeInLeftDelay(ref) {
   tl1.fromTo(
     ref,

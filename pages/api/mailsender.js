@@ -3,12 +3,12 @@ import nodemailer from "nodemailer";
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "emirhashmailer@gmail.com",
-    pass: "wpuhvfquzmoxeqpo",
+    user: process.env.SOURCE_MAIL,
+    pass: process.env.MAIL_PASS,
   },
 });
 
-const to = "emirhansirkeci8@gmail.com";
+const to = process.env.TARGET_MAIL;
 
 export default async (req, res) => {
   let { name, from, msg, subject } = req.body;
